@@ -31,13 +31,17 @@ Based on MVC Structure, it contains:
 
 # Screens
 1) **Home Screen**
+
 ![](https://github.com/meharfatimakhan/TicTacToeMVC/blob/master/screens/HomeScreen.png)
 
 2) **Game Screen**
+
 ![](https://github.com/meharfatimakhan/TicTacToeMVC/blob/master/screens/PlayGame.png)
 
 3) **Score Board Screen**
+
 ![](https://github.com/meharfatimakhan/TicTacToeMVC/blob/master/screens/ScoreBoard.png)
 
 4) **Instruction Screen**
+
 ![](https://github.com/meharfatimakhan/TicTacToeMVC/blob/master/screens/HowToPlay.png)
