@@ -46,7 +46,6 @@ public class GameView extends javax.swing.JFrame {
         setLocationRelativeTo(null);
 
         draw = false;
-        playerTurn.setText(playerOne);
 
         obj = new controllerClass();
         button[0][0] = new JButton();
@@ -93,7 +92,7 @@ public class GameView extends javax.swing.JFrame {
         this();
         this.playerOne = player1;
         this.playerTwo = player2;
-
+        playerTurn.setText(playerOne);
         playerOneScore = obj.getScore(playerOne);
         playerTwoScore = obj.getScore(playerTwo);
 
@@ -150,7 +149,8 @@ public class GameView extends javax.swing.JFrame {
         }
 
         if (strB1 != "" && strB2 != "" && strB3 != "" && strB4 != "" && strB5 != "" && strB6 != "" && strB7 != "" && strB8 != "" && strB9 != "") {
-            JOptionPane.showMessageDialog(null, "Match Tied!", "Draw", JOptionPane.INFORMATION_MESSAGE);
+            ImageIcon icon = new ImageIcon(this.getClass().getResource("icons8-sad-64.gif").getFile());
+            JOptionPane.showMessageDialog(null, "Match Tied!", "Draw", JOptionPane.INFORMATION_MESSAGE, icon);
         }
 
     }
@@ -162,14 +162,17 @@ public class GameView extends javax.swing.JFrame {
     }
 
     private void winnerO() {
-        JOptionPane.showMessageDialog(this, playerTwo + " Wins!", "Winner", JOptionPane.INFORMATION_MESSAGE);
+
+        ImageIcon icon = new ImageIcon(this.getClass().getResource("icons8-trophy-64.gif").getFile());
+        JOptionPane.showMessageDialog(this, playerTwo + " Wins!", "Winner", JOptionPane.INFORMATION_MESSAGE, icon);
         playerTwoScore++;
         String score = Integer.toString(playerTwoScore);
         obj.updateScore(playerTwo, score);
     }
 
     private void winnerX() {
-        JOptionPane.showMessageDialog(this, playerOne + " Wins!", "Winner", JOptionPane.INFORMATION_MESSAGE);
+        ImageIcon icon = new ImageIcon(this.getClass().getResource("icons8-trophy-64.gif").getFile());
+        JOptionPane.showMessageDialog(this, playerOne + " Wins!", "Winner", JOptionPane.INFORMATION_MESSAGE, icon);
         playerOneScore++;
         String score = Integer.toString(playerOneScore);
         obj.updateScore(playerOne, score);
@@ -378,18 +381,20 @@ public class GameView extends javax.swing.JFrame {
                         if (determineTurn.equalsIgnoreCase("X")) {
                             if (button[detectClickRow][detectClickColumn].getIcon() == null) {
                                 button[detectClickRow][detectClickColumn].setIcon(new ImageIcon(this.getClass().getResource("image8.gif")));
-
+                                buttonClicked = false;
+                                turn();
                             }
                         } else {
                             if (button[detectClickRow][detectClickColumn].getIcon() == null) {
                                 button[detectClickRow][detectClickColumn].setIcon(new ImageIcon(this.getClass().getResource("image10.gif")));
-
+                                buttonClicked = false;
+                                turn();
                             }
                         }
-                        turn();
+
                         winLose();
                         matchTied();
-                        buttonClicked = false;
+
                     }
                 }
                 if (!buttonClicked) {
