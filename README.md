@@ -20,7 +20,7 @@ Based on MVC Structure, it contains:
 
 3) The Controller Module
 
-* controllerClass.java.java
+* controllerClass.java
 
 
 # Features
