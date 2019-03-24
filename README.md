@@ -20,7 +20,7 @@ Based on MVC Structure, it contains:
 
 3) The Controller Module
 
-* controllerClass.java.java
+* controllerClass.java
 
 
 # Features
@@ -45,3 +45,11 @@ Based on MVC Structure, it contains:
 4) **Instruction Screen**
 
 ![](https://github.com/meharfatimakhan/TicTacToeMVC/blob/master/screens/HowToPlay.png)
+
+5) **Draw Case**
+
+![](https://github.com/meharfatimakhan/TicTacToeMVC/blob/master/screens/DrawCase.png)
+
+6) **Win Case**
+
+![](https://github.com/meharfatimakhan/TicTacToeMVC/blob/master/screens/WinCase.png)
